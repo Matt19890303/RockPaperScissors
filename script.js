@@ -9,10 +9,18 @@ const myArray = ["ROCK", "PAPER", "SCISSORS"];
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const result1_div = document.querySelector(".result1");
+const result2_div = document.querySelector(".result2");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
+
+
+// function scoreCount() {
+//   if (userScore < 5) {
+//     userScore_span.innerHTML=userScore;
+//   }
+// }
 
 
 // https://www.codegrepper.com/code-examples/javascript/javascript+pick+random+string+from+array%5D
@@ -33,9 +41,6 @@ function lose() {
   computerScore_span.innerHTML=computerScore;
 }
 
-// function tie() {
-//   console.log("Tie!");
-// }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 // Create a function for each section
@@ -48,19 +53,21 @@ function game(userChoice) {
     case "ROCKSCISSORS":
     case "SCISSORSPAPER":
       win();
-      result_div.innerHTML=userChoice + " beats " + compChoice;
+      result1_div.innerHTML=userChoice + " beats " + compChoice;
+      result2_div.innerHTML="User wins!";
       break;
     case "ROCKPAPER":
     case "SCISSORSROCK":
     case "PAPERSCISSORS":
       lose();
-      result_div.innerHTML=compChoice + " beats " + userChoice;
+      result1_div.innerHTML=compChoice + " beats " + userChoice;
+      result2_div.innerHTML="Computer wins!";
       break;
     case "ROCKROCK":
     case "SCISSORSSCISSORS":
     case "PAPERPAPER":
-      tie();
-      result_div.innerHTML="Its a draw!";
+      result1_div.innerHTML="You both picked " + userChoice;
+      result2_div.innerHTML="Its a draw!";
       break;
   }
 }
