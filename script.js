@@ -1,7 +1,10 @@
-const userScore = 0;
-const computerScore = 0;
-// let rounds = 0;
 
+// https://www.youtube.com/watch?v=jaVNP3nIAv0&t=566s
+
+let userScore = 0;
+let computerScore = 0;
+const myArray = ["ROCK", "PAPER", "SCISSORS"];
+// let rounds = 0;
 
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
@@ -11,26 +14,92 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
-function main {
-rock_div.addEventListener("click", function() {
-  game("rock");
-})
 
-paper_div.addEventListener("click", function() {
-  game("paper");
-})
+// https://www.codegrepper.com/code-examples/javascript/javascript+pick+random+string+from+array%5D
+// to randomise the array created above
+function computerChoice() {
+  return myArray[Math.floor(Math.random()*myArray.length)];
+  }
 
-scissors_div.addEventListener("click", function() {
-  game("scissors");
-})
+// Updates the score on the screen
+function win() {
+  userScore++;
+  userScore_span.innerHTML=userScore;
+}
+
+// Updates the score on the screen
+function lose() {
+  computerScore++;
+  computerScore_span.innerHTML=computerScore;
+}
+
+// function tie() {
+//   console.log("Tie!");
+// }
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+// Create a function for each section
+function game(userChoice) {
+  const compChoice = computerChoice();
+  console.log("User: " + userChoice);
+  console.log("Comp: " + compChoice);
+  switch (userChoice + compChoice) {
+    case "PAPERROCK":
+    case "ROCKSCISSORS":
+    case "SCISSORSPAPER":
+      win();
+      result_div.innerHTML=userChoice + " beats " + compChoice;
+      break;
+    case "ROCKPAPER":
+    case "SCISSORSROCK":
+    case "PAPERSCISSORS":
+      lose();
+      result_div.innerHTML=compChoice + " beats " + userChoice;
+      break;
+    case "ROCKROCK":
+    case "SCISSORSSCISSORS":
+    case "PAPERPAPER":
+      tie();
+      result_div.innerHTML="Its a draw!";
+      break;
+  }
 }
 
 
+// when clicked call the function within the varable created above based on the id in the html
+function main() {
+  rock_div.addEventListener("click", function() {
+    game("ROCK");
+  })
+
+  paper_div.addEventListener("click", function() {
+    game("PAPER");
+  })
+
+  scissors_div.addEventListener("click", function() {
+    game("SCISSORS");
+  })
+}
+
+main();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ##################################################################################
 // ##################################################################################
 
 
-// const myArray = ["ROCK", "PAPER", "SCISSORS"];
 // let roundWinner = '';
 
 // https://www.codegrepper.com/code-examples/javascript/javascript+pick+random+string+from+array%5D
