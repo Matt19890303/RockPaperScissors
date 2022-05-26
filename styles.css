@@ -1,105 +1,95 @@
-/* styles.css */
-/* universal selector - Applies to whole document */
-*{
-	padding: 10px;
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+* {
+	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	background: #474747;
-	color: #fff;
 }
-/* To center everything in game */
-.game{
+
+header {
 	display: flex;
-	flex-direction: column;
-    margin: 20px;
-	height: 100vh;
-	width: 100vw;
 	justify-content: center;
-	align-items: center;
+	padding: 20px;
+	font-size: 25px;
+	font-family: Asap, sans-serif;
+	color: #24272E;
+	background: white;
 }
 
-/* Title of the game */
-.title{
-	position: absolute;
-	top: 0;
-	font-size: 4rem;
-	z-index: 2;
+body {
+	background: #24272E;
+	color: white;
 }
 
-/* Score Board */
-.score{
-	display: flex;
-	width: 30vw;
-	justify-content: space-evenly;
-	position: absolute;
-	top: 70px;
-	z-index: 1;
-}
-
-/* Score */
-.p-count,.c-count{
+.score-board {
+	/* to add 20px margin and to center the block */
+	margin: 20px auto;
+	/* 15px to the top and bottom and 20px to the left and right */
+	padding: 15px 20px;
+	width: 200px;
+	font-size: 45px;
+	border-radius: 2%;
+	border: 3px solid white;
 	text-align: center;
-	font-size: 1.5rem;
-	margin-top: 1rem;
+	font-family: Asap, sans-serif;
+	/* Makes 'score-board' the square in which to position other boxes or items instaed of the default which is the entire screen*/
+	position: relative;
 }
 
-/* displaying three buttons in one line */
-.options{
-	display: flex;
-	width: 50vw;
-	justify-content: space-evenly;
-	margin-top: 2rem;
-    /* border: solid red; */
+.badge {
+	background: #E2584D;
+	font-family: Asap, sans-serif;
+	padding: 2px 10px;
+	font-size: 18px;
 }
 
-/* Styling on all three buttons */
-.rock, .paper, .scissor{
-	/* padding: 0px; */
-	height: 50px;
-    width: 150px;
-    font-size: large;
-	border-radius: 10px;
-	background: black;
-	outline: none;
-	border-color: white;
-	border: none;
-	cursor: pointer;
+/* IDs have # and classes have . */
+#user-label {
+	/* allows you to move the highlighted box(user-label) */
+	position: absolute;
+	top: 25px;
+	left: -30px;
 }
 
-.move{
-	font-size: 2rem;
+/* IDs have # and classes have . */
+#computer-label {
+	/* allows you to move the highlighted box(user-label) */
+	/* using negative values pushes it out of the box and positives pushes it in */
+	position: absolute;
+	top: 25px;
+	right: -40px;
+}
+
+.result {
+	text-align: center;
+	font-family: Asap, sans-serif;
 	font-weight: bold;
-    padding: 50px;
+	font-size: 60px;
 }
 
-/* Reload button style */
-.reload {
-	display: none;
-	margin-top: 2rem;
-	padding: 1rem;
-	background: green;
-	outline: none;
+.choices {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* border: solid red; */
+}
+
+.choice {
+	margin: 50px 40px;
+	padding: 15px;
+	background: none;
 	border: none;
-	border-radius: 10px;
+	outline: none;
 	cursor: pointer;
+	font-size: 5rem;
+	border: 3px solid white;
+	border-radius: 50%;
+	/* slows down the growth and shrink when hover to 100ms */
+	transition: 100ms;
 }
 
-.result{
-	margin-top: 20px;
-	font-size: 1.2rem;
+/* when hovering over the button it changes size showing you have highlighted it */
+.choice:hover {
+	transform: scale(1.2);
+	background: #394e77;
 }
-
-/* Responsive Design */
-@media screen and (max-width: 612px)
-{
-	.title{
-		text-align: center;
-	}
-	.score{
-		position: absolute;
-		top: 200px;
-		width: 100vw;
-	}
-	.options{
-		width: 100vw;
-	}

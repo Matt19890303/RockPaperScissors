@@ -1,62 +1,34 @@
-
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rock Paper Scissors Game</title>
 	<link rel="stylesheet" href="styles.css">
-	<title>Rock Paper Scissor</title>
+	<script src="script.js" defer></script>
 </head>
 <body>
-	<section class="game">
-		<!--Title -->
-		<div class="title">Rock Paper Scissor</div>
-		
-		<!--Display Score of player and computer -->
-		<div class="score">
-			<div class="playerScore">
-				<h2>Player</h2>
-				<p class="p-count count">0</p>
+	<!-- header of the page -->
+	<header>
+		<h1>Rock Paper Scissors</h1>
+	</header>
 
-			</div>	
-			<div class="computerScore">
-				<h2>Computer</h2>
-				<p class="c-count count">0</p>
+	<!-- the score board for user and comp -->
+	<div class="score-board">
+		<div id = "user-label" class="badge">user</div>
+		<div id = "computer-label" class="badge">comp</div>
+		<span id="user-score">0</span>:<span id="computer-score">0</span>
+	</div>
 
-			</div>
-		</div>
-	
-		<div class="move">Choose your move</div>
-		
-		<!--Number of moves left before game ends -->
-		<!-- <div class="movesleft">Moves Left: 10 </div> -->
-		
-		<!--Options available to player to play game -->
-		<div class="options">
-			<button class="rock">Rock</button>
-			<button class="paper">Paper</button>
-			<button class="scissor">Scissors</button>
-		</div>
-		
-		<!--Final result of game -->
-		<div class="result"></div>
-		
-		<!--Reload the game -->
-		<button class="reload"></button>
+	<div class="result">
+		<p>Paper covers rock. You win!</p>
+	</div>
 
-	</section>
-
-	<script src="RPSgame.js"></script>
+	<div class="choices">
+		<button id="rock" class="choice">✊</button>
+		<button id="paper" class="choice">✋</button>
+		<button id="scissors" class="choice">✌️</button>
+	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
