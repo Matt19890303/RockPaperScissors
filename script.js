@@ -22,11 +22,12 @@ const restartBtn = document.getElementById("startbutton");
 
 // https://www.youtube.com/watch?v=vU2akkcSV-g
 function checkScore() {
-  if (userScore == 5 || computerScore == 5){
-    rock_div.disabled = true;
-    paper_div.disabled = true;
-    scissors_div.disabled = true;
-  } 
+  if (userScore === 5 || computerScore === 5) {
+    rock_div.disabled = true
+    paper_div.disabled = true
+    scissors_div.disabled = true
+  }
+}
 
 
 // https://www.codegrepper.com/code-examples/javascript/javascript+pick+random+string+from+array%5D
