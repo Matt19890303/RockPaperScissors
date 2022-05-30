@@ -34,6 +34,7 @@ body {
 	font-family: Asap, sans-serif;
 	/* Makes 'score-board' the square in which to position other boxes or items instaed of the default which is the entire screen*/
 	position: relative;
+	/* border: solid #24272E; */
 }
 
 .badge {
@@ -41,14 +42,17 @@ body {
 	font-family: Asap, sans-serif;
 	padding: 2px 10px;
 	font-size: 18px;
+	padding: 20px;
 }
 
 /* IDs have # and classes have . */
 #user-label {
 	/* allows you to move the highlighted box(user-label) */
 	position: absolute;
-	top: 25px;
-	left: -30px;
+	top: -3px;
+	left: -77px;
+	height: 88px;
+	border: 3px solid white;
 }
 
 /* IDs have # and classes have . */
@@ -56,8 +60,10 @@ body {
 	/* allows you to move the highlighted box(user-label) */
 	/* using negative values pushes it out of the box and positives pushes it in */
 	position: absolute;
-	top: 25px;
-	right: -40px;
+	top: -3px;
+	right: -88px;
+	height: 88px;
+	border: 3px solid white;
 }
 
 .result1 {
@@ -100,3 +106,75 @@ body {
 	transform: scale(1.2);
 	background: #394e77;
 }
+
+
+/* Restart button */
+
+.restartGame {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	/* border: solid green; */
+}
+
+#startbutton {
+    min-width:100px;
+    height:50px;
+    text-transform: uppercase;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 4px 5px 0px;
+    border-bottom: 2px solid;
+    border-right: 1px solid;
+  }
+
+#startbutton:hover {
+    background-color: lightgrey;
+    box-shadow: 3px 3px 1px;
+    border-bottom: 2px solid;
+    transform: translate(-1%, -1%);
+    transition: all 0.1s ease-in;
+}
+
+#startbutton:active {
+    box-shadow: none;
+    border-bottom-width: 2px;
+    transform: translate(3px, 4px);
+}
+
+/* ############################################################## */
+
+/* #game-over {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    height:200px;
+    width:250px;
+    text-align: center;
+}
+
+#game-over a {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    text-align: center;
+    font-size:2em;
+    display: inline-block;
+}
+
+#game-over a:hover { background-color: #ffffff; color: #1bafdb; } */
