@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	font-size: 25px;
+	font-family: Asap, sans-serif;
+	color: #24272E;
+	background: rgba(255, 255, 255, 0.63);
+}
+
+body {
+	background: #24272E;
+	color: white;
+}
+
+.score-board {
+	/* to add 20px margin and to center the block */
+	margin: 20px auto;
+	/* 15px to the top and bottom and 20px to the left and right */
+	padding: 15px 20px;
+	width: 200px;
+	font-size: 45px;
+	/* border-radius: 5%; */
+	/* border: 3px solid white; */
+	text-align: center;
+	font-family: Asap, sans-serif;
+	/* Makes 'score-board' the square in which to position other boxes or items instaed of the default which is the entire screen*/
+	position: relative;
+}
+
+.badge {
+	background: #E2584D;
+	font-family: Asap, sans-serif;
+	padding: 2px 10px;
+	font-size: 18px;
+	padding: 20px;
+}
+
+/* IDs have # and classes have . */
+#user-label {
+	/* allows you to move the highlighted box(user-label) */
+	position: absolute;
+	top: -3px;
+	left: -50px;
+	height: 88px;
+	border-radius: 25%;
+	border: 3px solid white;
+}
+
+/* IDs have # and classes have . */
+#computer-label {
+	/* allows you to move the highlighted box(user-label) */
+	/* using negative values pushes it out of the box and positives pushes it in */
+	position: absolute;
+	top: -3px;
+	right: -60px;
+	height: 88px;
+	border-radius: 25%;
+	border: 3px solid white;
+}
+
+.result1 {
+	text-align: center;
+	font-family: Asap, sans-serif;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+.result2 {
+	text-align: center;
+	font-family: Asap, sans-serif;
+	/* font-weight: bold; */
+	font-size: 40px;
+}
+
+.choices {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* border: solid red; */
+}
+
+.choice {
+	margin: 50px 40px;
+	padding: 15px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 5rem;
+	border: 3px solid white;
+	border-radius: 50%;
+	/* slows down the growth and shrink when hover to 100ms */
+	transition: 100ms;
+}
+
+/* when hovering over the button it changes size showing you have highlighted it */
+.choice:hover {
+	transform: scale(1.2);
+	background: #394e77;
+}
+
+
+/* Restart button */
+
+.restartGame {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	/* border: solid green; */
+}
+
+#startbutton {
+    min-width:100px;
+    height:50px;
+    text-transform: uppercase;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400px;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 4px 5px 0px;
+    border-bottom: 2px solid;
+    border-right: 1px solid;
+  }
+
+#startbutton:hover {
+    background-color: lightgrey;
+    box-shadow: 3px 3px 1px;
+    border-bottom: 2px solid;
+    transform: translate(-1%, -1%);
+    transition: all 0.1s ease-in;
+}
+
+#startbutton:active {
+    box-shadow: none;
+    border-bottom-width: 2px;
+    transform: translate(3px, 4px);
+}
