@@ -14,8 +14,6 @@ const result2_div = document.querySelector(".result2");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
-// Restart Button //
-// const restartBtn = document.getElementById("startbutton");
 
 
 // https://www.youtube.com/watch?v=vU2akkcSV-g
